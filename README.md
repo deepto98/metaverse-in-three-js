@@ -21,3 +21,4 @@
     </mesh>
     ```
     If args are changed, entire object has to be reconstructed. For scale, existing obj is changed. So, Method 1 is better for performance
+6. Animations done using UseFrame : https://docs.pmnd.rs/react-three-fiber/tutorials/basic-animations#useframe 
