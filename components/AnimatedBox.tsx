@@ -8,10 +8,10 @@ type Props = {
 }
 
 const AnimatedBox: React.FC<Props> = ({ isTesting }) => {
-  const meshRef = useRef<THREE.Mesh>(null)
+  const meshRef = useRef<THREE.Mesh>(null!)
 
   // ---HOOKS---
-  { isTesting ? useHelper(meshRef, BoxHelper, "blue") : null; }
+  { isTesting ? useHelper(meshRef, BoxHelper, "blue") : null; } //BoxHelper implemented using drei
 
   useFrame(({ clock }) => {
     if (meshRef.current) {

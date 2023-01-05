@@ -6,7 +6,7 @@ import CameraOrbitController from '../components/CameraOrbitController';
 import { OrbitControls, Stats } from '@react-three/drei';
 
 const Home: NextPage = () => {
-  const testing = false;
+  const testing = true;
   return (
     <div className='container'>
       <Canvas>
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
         //Only show for development
         {testing ? <Stats /> : null} //shows frame rate
         {testing ? <axesHelper args={[2]} /> : null}
+        {testing ? <gridHelper args={[15,20]}/> : null} //size,boxes
 
         {/* <CameraOrbitController/> //our custom OrbitCOntroller */}
         <OrbitControls /> //using drei's OrbitControls instead of our custom one
