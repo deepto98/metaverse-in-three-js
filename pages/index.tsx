@@ -1,15 +1,20 @@
 
-import { Canvas } from '@react-three/fiber'
+import { Canvas, ThreeElements } from '@react-three/fiber'
 import { NextPage } from 'next'
 import { useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
 
 const AnimatedBox = () => {
-  useFrame(() => {
-    console.log("Hi")
+  const meshRef = useRef<THREE.Mesh>(null)
+
+  useFrame(({ clock }) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x = clock.getElapsedTime()
+    }
   });
 
   return (
-    <mesh scale={[1, 0.5, 0.5]}>
+    <mesh ref={meshRef} scale={[0.5, 0.5, 0.5]}>
       <boxGeometry />
       <meshStandardMaterial />
     </mesh>
