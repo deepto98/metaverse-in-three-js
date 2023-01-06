@@ -4,9 +4,11 @@ import { NextPage } from 'next'
 import AnimatedBox from '../components/AnimatedBox';
 import CameraOrbitController from '../components/CameraOrbitController';
 import { OrbitControls, Stats,PerspectiveCamera, OrthographicCamera } from '@react-three/drei';
+import TestGeometry from '../components/TestGeometry';
 
 const Home: NextPage = () => {
   const testing = true;
+  // const testing = false;
   return (
     <div className='container'>
 
@@ -35,7 +37,9 @@ const Home: NextPage = () => {
         <ambientLight intensity={0.1} />
         <directionalLight color="red" position={[0, 0, 5]} />
 
-        <AnimatedBox isTesting={testing} />
+        {/* //Mesh = Material + Geometry */}
+        {/* <AnimatedBox isTesting={testing} /> */}
+        <TestGeometry />
       </Canvas>
     </div>
   );

@@ -20,6 +20,7 @@ const AnimatedBox: React.FC<Props> = ({ isTesting }) => {
   });
 
   return (
+    //Mesh = Material + Geometry */}
     <mesh visible={true} ref={meshRef} scale={[0.5, 0.5, 0.5]}>
       <boxGeometry />
       <meshStandardMaterial />
