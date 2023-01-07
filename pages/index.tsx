@@ -5,6 +5,7 @@ import AnimatedBox from '../components/AnimatedBox';
 import CameraOrbitController from '../components/CameraOrbitController';
 import { OrbitControls, Stats,PerspectiveCamera, OrthographicCamera } from '@react-three/drei';
 import TestGeometry from '../components/TestGeometry';
+import TexturedSphere from '../components/TexturedSphere';
 
 const Home: NextPage = () => {
   const testing = true;
@@ -35,11 +36,13 @@ const Home: NextPage = () => {
         <OrbitControls /> //using drei's OrbitControls instead of our custom one
 
         <ambientLight intensity={0.1} />
-        <directionalLight color="red" position={[0, 0, 5]} />
+        <directionalLight color="red" position={[0, 5, 5]} />
 
         {/* //Mesh = Material + Geometry */}
         {/* <AnimatedBox isTesting={testing} /> */}
-        <TestGeometry />
+        {/* <TestGeometry /> */}
+
+        <TexturedSphere />
       </Canvas>
     </div>
   );
