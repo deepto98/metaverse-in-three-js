@@ -8,8 +8,8 @@ import TestGeometry from '../components/TestGeometry';
 import TexturedSphere from '../components/TexturedSphere';
 
 const Home: NextPage = () => {
-  const testing = true;
-  // const testing = false;
+  // const testing = true;
+  const testing = false;
   return (
     <div className='container'>
 
